@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>TechHaven</h1>
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </header>
+
+    <main class="product-details">
+        <div id="loading" style="text-align: center; font-size: 1.2rem; margin-top: 50px;">
+            Loading laptop data from MongoDB...
+        </div>
+
+        <div id="laptop-content" style="display: none;">
+            <section class="product-info">
+                <img id="laptop-image" src="" alt="Laptop Image">
+                <div class="details-text">
+                    <h2 id="laptop-title"></h2>
+                    <p><strong>Short Description:</strong> <span id="laptop-short-desc"></span></p>
+                    <p><strong>Full Description:</strong> <span id="laptop-full-desc"></span></p>
+                    <p class="price">€<span id="laptop-price"></span></p>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="forms-section">
+                <div class="form-container purchase-form">
+                    <h3>Buy This Laptop</h3>
+                    <form id="purchase-form">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Ivan Ivanov" required>
+                        
+                        <label for="address">Delivery Address:</label>
+                        <input type="text" id="address" name="address" placeholder="Sofia, Bulgaria" required>
+                        
+                        <button type="submit" class="submit-btn">Place Order</button>
+                    </form>
+                </div>
+
+                <div class="form-container reviews-section">
+                    <h3>User Reviews</h3>
+                    
+                    <div id="reviews-container">
+                        <p id="no-reviews" style="color: #666; font-style: italic;">No reviews yet. Be the first!</p>
+                    </div>
+
+                    <h4 class="leave-review-title">Leave a Review</h4>
+                    <form id="review-form">
+                        <label for="comment">Comment:</label>
+                        <textarea id="comment" name="comment" rows="3" placeholder="Много хубав продукт!" required></textarea>
+                        
+                        <button type="submit" class="submit-btn">Submit Review</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
